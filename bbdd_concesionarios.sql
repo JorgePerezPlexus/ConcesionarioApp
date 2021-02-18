@@ -15,15 +15,11 @@ create table Concesionarios
 concesionarioID int identity primary key,
 nombre varchar(50) not null,
 direccionID int,
-stockID int,
 foreign key(direccionID) references Direcciones(direccionID)
 );
 
 alter table Concesionarios
 truncate foreign key(stockID) references Stock(stockID);
-
-drop table Concesionarios;
-drop table Direcciones;
 
 create table Vehiculos
 (
@@ -48,9 +44,9 @@ foreign key(concesionarioID) references Concesionarios(concesionarioID)
 
 go;
 
-insert into Direcciones values ('Arteixo','A Coruña');
-insert into Direcciones values ('Carballo','A Coruña');
-insert into Direcciones values ('Vimianzo','A Coruña');
+insert into Direcciones values ('Arteixo','A CoruÃ±a');
+insert into Direcciones values ('Carballo','A CoruÃ±a');
+insert into Direcciones values ('Vimianzo','A CoruÃ±a');
 
 insert into Vehiculos values ('Fiat','Idea',12000,'n');
 insert into Vehiculos values ('Seat','Ibiza',220000,'n');
