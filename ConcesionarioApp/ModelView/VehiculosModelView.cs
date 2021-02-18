@@ -8,48 +8,48 @@ using System.Windows;
 
 namespace ConcesionarioApp.ModelView
 {
-    public class ConcesionariosModelView : INotifyPropertyChanged
+    public class VehiculosModelView
     {
-
         string connectionString = "Data Source=PLX300000002221\\SQLEXPRESS;Initial Catalog=dboConcesionarios;Integrated Security=True";
         SqlConnection con;
         SqlCommand cmd;
         SqlDataAdapter adapter;
         DataSet ds;
-        public ObservableCollection<Concesionario> concesionarios { get; set; }
-        public ObservableCollection<ConcesionarioInfo> infoConcesionarios { get; set; }
+        public ObservableCollection<Vehiculo> stock { get; set; }
 
-        public ConcesionariosModelView()
+        public VehiculosModelView()
         {
-            ListarConcesionarioInfo();
+          
         }
 
-        public void ListarConcesionarioInfo()
+        public void actualizarVehiculos(int concesionarioID)
         {
             try
             {
                 con = new SqlConnection(connectionString);
                 con.Open();
-                cmd = new SqlCommand("select c.concesionarioID id, c.nombre nombre, " +
-                    "d.poblacion poblacion , d.ciudad ciudad from Concesionarios c inner join Direcciones d " +
-                    "on c.direccionID=d.direccionID", con);
+                cmd = new SqlCommand("select v.vehiculoID, v.marca, v.modelo, v.km, " +
+                    "v.vendido from stock s inner join Vehiculos v on v.vehiculoID=s.vehiculoID where concesionarioID = @ID", con);
+                cmd.Parameters.AddWithValue("@ID", concesionarioID);
                 adapter = new SqlDataAdapter(cmd);
+                
                 ds = new DataSet();
                 adapter.Fill(ds, "TablaConcesionarios");
 
-                if (infoConcesionarios == null)
-                    infoConcesionarios = new ObservableCollection<ConcesionarioInfo>();
+                if (stock == null)
+                    stock = new ObservableCollection<Vehiculo>();
 
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    infoConcesionarios.Add(new ConcesionarioInfo
+                    stock.Add(new Vehiculo
                     {
                         ID = Convert.ToInt32(dr[0].ToString()),
-                        nombre = dr[1].ToString(),
-                        poblacion = dr[2].ToString(),
-                        ciudad = dr[3].ToString()
+                        Marca = dr[1].ToString(),
+                        Modelo = dr[2].ToString(),
+                        Km= Convert.ToInt32(dr[3].ToString()),
+                        Vendido = dr[2].ToString(),
+
                     });
-                    Console.WriteLine(infoConcesionarios.ToString());
                 }
             }
             catch (Exception ex)
@@ -65,7 +65,6 @@ namespace ConcesionarioApp.ModelView
                 con.Dispose();
             }
         }
-        
 
         INotifyPropertyChanged Members;
 

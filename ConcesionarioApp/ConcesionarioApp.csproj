@@ -75,7 +75,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ModelView\ConcesionariosModelView.cs" />
+    <Compile Include="ModelView\VehiculosModelView.cs" />
     <Compile Include="Model\Concesionario.cs" />
+    <Compile Include="Model\ConcesionarioInfo.cs" />
     <Compile Include="Model\Direccion.cs" />
     <Compile Include="Model\Stock.cs" />
     <Compile Include="Model\Vehiculo.cs" />

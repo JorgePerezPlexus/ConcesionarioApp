@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="Administrador de concesionarios" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="TablaConcesionarios" ItemsSource="{Binding concesionarios}" HorizontalAlignment="Left" Height="154" Margin="40,76,0,0" VerticalAlignment="Top" Width="317"/>
-        <Label x:Name="LabelConcesionario" Content="Concesionarios" HorizontalAlignment="Left" Height="39" Margin="42,32,0,0" VerticalAlignment="Top" Width="279" FontSize="18"/>
-        <DataGrid x:Name="TablaStock" HorizontalAlignment="Left" Height="154" Margin="406,76,0,0" VerticalAlignment="Top" Width="346"/>
-        <Label x:Name="LabelStock" Content="Stock" HorizontalAlignment="Left" Height="44" Margin="406,32,0,0" VerticalAlignment="Top" Width="346" FontSize="18"/>
-        <ComboBox x:Name="ComboBoxVehiculos" HorizontalAlignment="Left" Height="28" Margin="406,299,0,0" VerticalAlignment="Top" Width="346"/>
+        <DataGrid x:Name="TablaConcesionarios" ItemsSource="{Binding infoConcesionarios}" HorizontalAlignment="Left" Height="154" Margin="26,76,0,0" VerticalAlignment="Top" Width="358" ColumnWidth="*" SelectionChanged="TablaConcesionarios_SelectionChanged"/>
+        <Label x:Name="LabelConcesionario" Content="Concesionarios" HorizontalAlignment="Left" Height="39" Margin="26,32,0,0" VerticalAlignment="Top" Width="295" FontSize="18"/>
+        <DataGrid x:Name="TablaStock" HorizontalAlignment="Left" Height="154" Margin="406,76,0,0" VerticalAlignment="Top" Width="359"/>
+        <Label x:Name="LabelStock" Content="Stock" HorizontalAlignment="Left" Height="44" Margin="406,32,0,0" VerticalAlignment="Top" Width="359" FontSize="18"/>
+        <ComboBox x:Name="ComboBoxVehiculos" HorizontalAlignment="Left" Height="28" Margin="406,299,0,0" VerticalAlignment="Top" Width="359"/>
         <Label x:Name="LabelVehiculos" Content="Vehiculos" HorizontalAlignment="Left" Height="41" Margin="404,253,0,0" VerticalAlignment="Top" Width="348" FontSize="18"/>
         <Button x:Name="BotonAnadir" Content="Añadir" HorizontalAlignment="Left" Height="35" Margin="406,344,0,0" VerticalAlignment="Top" Width="105" FontSize="16"/>
         <Button x:Name="BotonQuitar" Content="Quitar" HorizontalAlignment="Left" Height="35" Margin="530,344,0,0" VerticalAlignment="Top" Width="102" FontSize="14"/>
