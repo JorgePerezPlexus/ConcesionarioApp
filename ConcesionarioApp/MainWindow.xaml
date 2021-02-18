@@ -1,0 +1,20 @@
+﻿<Window x:Class="ConcesionarioApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConcesionarioApp"
+        mc:Ignorable="d"
+        Title="Administrador de concesionarios" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="TablaConcesionarios" HorizontalAlignment="Left" Height="154" Margin="40,76,0,0" VerticalAlignment="Top" Width="281"/>
+        <Label x:Name="LabelConcesionario" Content="Concesionarios" HorizontalAlignment="Left" Height="39" Margin="42,32,0,0" VerticalAlignment="Top" Width="279" FontSize="18"/>
+        <DataGrid x:Name="TablaStock" HorizontalAlignment="Left" Height="154" Margin="406,76,0,0" VerticalAlignment="Top" Width="346"/>
+        <Label x:Name="LabelStock" Content="Stock" HorizontalAlignment="Left" Height="44" Margin="406,32,0,0" VerticalAlignment="Top" Width="346" FontSize="18"/>
+        <ComboBox x:Name="ComboBoxVehiculos" HorizontalAlignment="Left" Height="28" Margin="406,299,0,0" VerticalAlignment="Top" Width="346"/>
+        <Label x:Name="LabelVehiculos" Content="Vehiculos" HorizontalAlignment="Left" Height="41" Margin="404,253,0,0" VerticalAlignment="Top" Width="348" FontSize="18"/>
+        <Button x:Name="BotonAnadir" Content="Añadir" HorizontalAlignment="Left" Height="35" Margin="406,344,0,0" VerticalAlignment="Top" Width="105" FontSize="16"/>
+        <Button x:Name="BotonQuitar" Content="Quitar" HorizontalAlignment="Left" Height="35" Margin="530,344,0,0" VerticalAlignment="Top" Width="102" FontSize="14"/>
+
+    </Grid>
+</Window>
