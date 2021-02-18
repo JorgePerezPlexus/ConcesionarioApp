@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Administrador de concesionarios" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="TablaConcesionarios" HorizontalAlignment="Left" Height="154" Margin="40,76,0,0" VerticalAlignment="Top" Width="281"/>
+        <DataGrid x:Name="TablaConcesionarios" ItemsSource="{Binding concesionarios}" HorizontalAlignment="Left" Height="154" Margin="40,76,0,0" VerticalAlignment="Top" Width="317"/>
         <Label x:Name="LabelConcesionario" Content="Concesionarios" HorizontalAlignment="Left" Height="39" Margin="42,32,0,0" VerticalAlignment="Top" Width="279" FontSize="18"/>
         <DataGrid x:Name="TablaStock" HorizontalAlignment="Left" Height="154" Margin="406,76,0,0" VerticalAlignment="Top" Width="346"/>
         <Label x:Name="LabelStock" Content="Stock" HorizontalAlignment="Left" Height="44" Margin="406,32,0,0" VerticalAlignment="Top" Width="346" FontSize="18"/>

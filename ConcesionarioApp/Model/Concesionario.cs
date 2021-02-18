@@ -11,6 +11,5 @@ namespace ConcesionarioApp.Model
         public int ID { get; set; }
         public string nombre { get; set; }
         public int direccionID { get; set; }
-        public int stockID { get; set; }
     }
 }

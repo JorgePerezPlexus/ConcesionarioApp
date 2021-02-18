@@ -74,6 +74,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModelView\ConcesionariosModelView.cs" />
     <Compile Include="Model\Concesionario.cs" />
     <Compile Include="Model\Direccion.cs" />
     <Compile Include="Model\Stock.cs" />
@@ -114,8 +115,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ModelView\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
